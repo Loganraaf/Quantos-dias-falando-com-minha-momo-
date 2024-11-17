@@ -15,8 +15,8 @@
         }
 
         .background-hearts {
-            background-image: radial-gradient(circle, transparent 20%, rgba(255, 192, 203, 0.5) 21%), black;
-            background-size: 30px 30px;
+            background-image: url('fundo.png'); /* Usando a imagem "fundo" que você adicionou no repositório */
+            background-size: cover; /* Faz o fundo cobrir toda a tela */
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -26,19 +26,16 @@
         }
 
         .photo-container {
-            background: url('https://emoji.gg/assets/emoji/heart_1f970.png') no-repeat center center; /* Coração 🩷 como fundo */
-            background-size: 80%;
             padding: 20px;
-            border-radius: 50%;
+            border-radius: 0%; /* Tornando a foto quadrada */
             display: inline-block;
             margin-bottom: 20px;
             position: relative;
         }
 
         .photo-container img {
-            width: 50vw; /* Foto bem menor, 50% da largura da tela */
-            height: auto;
-            border-radius: 50%; /* Faz a foto ficar redonda */
+            width: 50vw; /* Foto menor, 50% da largura da tela */
+            height: 50vw; /* Garantindo que a altura seja igual à largura */
             object-fit: cover;
         }
 
