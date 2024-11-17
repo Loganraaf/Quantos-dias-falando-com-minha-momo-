@@ -13,39 +13,36 @@
             margin: 0;
             padding: 0;
             position: relative;
-            overflow: hidden; /* Impede que os corações saiam da tela */
+            overflow: hidden; /* Impede que qualquer conteúdo saia da tela */
         }
 
-        .background-hearts {
+        /* Borda com corações rosa ao redor */
+        .border {
+            border: 10px solid pink; /* Borda rosa */
+            padding: 15px;
+            border-radius: 15px;
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1; /* Coloca o fundo atrás dos elementos principais */
-        }
-
-        .heart {
-            position: absolute;
-            font-size: 20px; /* Corações bem pequenos */
-            z-index: 0;
+            top: 10px;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
         }
 
         .photo-container {
-            border: 10px solid pink; /* Borda mais grossa para dar destaque */
+            border: 5px solid pink;
             padding: 5px;
             border-radius: 15px;
             display: inline-block;
             margin-bottom: 20px;
             position: relative;
-            z-index: 1; /* Garante que a foto fique acima do fundo */
+            z-index: 1;
         }
 
         .photo-container img {
             width: 50vw; /* Foto bem menor, 50% da largura da tela */
             height: auto;
             border-radius: 15px;
-            object-fit: cover; /* A imagem será redimensionada para cobrir o espaço */
+            object-fit: cover;
         }
 
         .days-count, .start-date {
@@ -56,13 +53,13 @@
             font-size: 56px; /* Aumentei mais o tamanho */
             color: pink;
             margin: 10px 0;
-            z-index: 1; /* Garante que o texto fique acima da imagem */
+            z-index: 1;
         }
 
         .start-date {
             font-size: 28px; /* Aumentei o tamanho do texto */
-            color: pink; /* Mesma cor do texto de cima */
-            z-index: 1; /* Garante que o texto fique acima da imagem */
+            color: pink;
+            z-index: 1;
         }
 
         /* Estilo para a linha horizontal rosa */
@@ -70,7 +67,7 @@
             width: 80%; /* A linha vai ocupar 80% da largura da tela */
             height: 3px;
             background-color: pink;
-            margin: 40px auto 0; /* Deixei espaço acima da linha e centralizei */
+            margin: 40px auto 0;
         }
 
         /* Estilo para a carta que você quer adicionar mais tarde */
@@ -88,56 +85,8 @@
     </style>
 </head>
 <body>
-    <div class="background-hearts">
-        <!-- Corações 🩷 espalhados por toda a tela, sem cobrir os textos -->
-        <div class="heart" style="top: 5%; left: 5%;">🩷</div>
-        <div class="heart" style="top: 5%; left: 15%;">🩷</div>
-        <div class="heart" style="top: 5%; left: 25%;">🩷</div>
-        <div class="heart" style="top: 5%; left: 35%;">🩷</div>
-        <div class="heart" style="top: 5%; left: 45%;">🩷</div>
-        <div class="heart" style="top: 5%; left: 55%;">🩷</div>
-        <div class="heart" style="top: 5%; left: 65%;">🩷</div>
-        <div class="heart" style="top: 5%; left: 75%;">🩷</div>
-        <div class="heart" style="top: 5%; left: 85%;">🩷</div>
-        <div class="heart" style="top: 15%; left: 5%;">🩷</div>
-        <div class="heart" style="top: 15%; left: 15%;">🩷</div>
-        <div class="heart" style="top: 15%; left: 25%;">🩷</div>
-        <div class="heart" style="top: 15%; left: 35%;">🩷</div>
-        <div class="heart" style="top: 15%; left: 45%;">🩷</div>
-        <div class="heart" style="top: 15%; left: 55%;">🩷</div>
-        <div class="heart" style="top: 15%; left: 65%;">🩷</div>
-        <div class="heart" style="top: 15%; left: 75%;">🩷</div>
-        <div class="heart" style="top: 15%; left: 85%;">🩷</div>
-        <div class="heart" style="top: 25%; left: 5%;">🩷</div>
-        <div class="heart" style="top: 25%; left: 15%;">🩷</div>
-        <div class="heart" style="top: 25%; left: 25%;">🩷</div>
-        <div class="heart" style="top: 25%; left: 35%;">🩷</div>
-        <div class="heart" style="top: 25%; left: 45%;">🩷</div>
-        <div class="heart" style="top: 25%; left: 55%;">🩷</div>
-        <div class="heart" style="top: 25%; left: 65%;">🩷</div>
-        <div class="heart" style="top: 25%; left: 75%;">🩷</div>
-        <div class="heart" style="top: 25%; left: 85%;">🩷</div>
-        <div class="heart" style="top: 35%; left: 5%;">🩷</div>
-        <div class="heart" style="top: 35%; left: 15%;">🩷</div>
-        <div class="heart" style="top: 35%; left: 25%;">🩷</div>
-        <div class="heart" style="top: 35%; left: 35%;">🩷</div>
-        <div class="heart" style="top: 35%; left: 45%;">🩷</div>
-        <div class="heart" style="top: 35%; left: 55%;">🩷</div>
-        <div class="heart" style="top: 35%; left: 65%;">🩷</div>
-        <div class="heart" style="top: 35%; left: 75%;">🩷</div>
-        <div class="heart" style="top: 35%; left: 85%;">🩷</div>
-        <!-- Mais corações, distribuídos por toda a tela -->
-        <div class="heart" style="top: 45%; left: 5%;">🩷</div>
-        <div class="heart" style="top: 45%; left: 15%;">🩷</div>
-        <div class="heart" style="top: 45%; left: 25%;">🩷</div>
-        <div class="heart" style="top: 45%; left: 35%;">🩷</div>
-        <div class="heart" style="top: 45%; left: 45%;">🩷</div>
-        <div class="heart" style="top: 45%; left: 55%;">🩷</div>
-        <div class="heart" style="top: 45%; left: 65%;">🩷</div>
-        <div class="heart" style="top: 45%; left: 75%;">🩷</div>
-        <div class="heart" style="top: 45%; left: 85%;">🩷</div>
-        <div class="heart" style="top: 55%; left: 5%;">🩷</div>
-        <!-- Corações adicionais podem ser adicionados conforme necessário -->
+    <div class="border">
+        <!-- Borda com corações rosa ao redor da tela -->
     </div>
 
     <div class="photo-container">
@@ -145,4 +94,30 @@
         <img src="Image" alt="Foto do casal">
     </div>
     <div class="days-count" id="days-count">
-        <!-- Dias juntos serão calcul
+        <!-- Dias juntos serão calculados aqui -->
+    </div>
+    <div class="start-date" id="start-date"></div>
+
+    <div class="line"></div>
+    <div class="letter">
+        <!-- Sua carta ficará aqui em breve -->
+    </div>
+
+    <script>
+        // Data do começo do relacionamento
+        const startDate = new Date("2024-07-01");
+
+        // Função para calcular os dias passados
+        function calculateDays() {
+            const today = new Date();
+            const timeDifference = today - startDate;
+            const days = Math.floor(timeDifference / (1000 * 3600 * 24));
+            document.getElementById('days-count').innerText = `${days} Dias que tu é minha hihi`;
+            document.getElementById('start-date').innerText = `Tu tá desde 01/07/2024 me aturando em momor, que guerreira 🙈`;
+        }
+
+        // Chama a função para calcular os dias e exibir na tela
+        calculateDays();
+    </script>
+</body>
+</html>
