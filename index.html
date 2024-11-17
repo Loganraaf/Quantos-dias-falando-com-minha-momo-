@@ -12,97 +12,59 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            position: relative;
-            overflow: hidden;
         }
 
-        /* Borda rosa com corações ao redor */
-        .border {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border: 10px solid pink; /* Borda rosa */
-            border-radius: 15px;
-            pointer-events: none; /* Impede que a borda interfira no conteúdo */
+        .background-hearts {
+            background-image: radial-gradient(circle, transparent 20%, rgba(255, 192, 203, 0.5) 21%), black;
+            background-size: 30px 30px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
         }
 
         .photo-container {
-            border: 5px solid pink;
-            padding: 5px;
-            border-radius: 15px;
+            background: url('https://emoji.gg/assets/emoji/heart_1f970.png') no-repeat center center; /* Coração 🩷 como fundo */
+            background-size: 80%; /* Ajuste o tamanho do coração para caber bem atrás da foto */
+            padding: 20px;
+            border-radius: 50%;
             display: inline-block;
             margin-bottom: 20px;
             position: relative;
-            z-index: 1;
         }
 
         .photo-container img {
-            width: 50vw; /* Foto ajustada para 50% da largura da tela */
+            width: 50vw; /* Foto bem menor, 50% da largura da tela */
             height: auto;
-            border-radius: 15px;
-            object-fit: cover;
-        }
-
-        .days-count, .start-date {
-            font-weight: bold; /* Colocando os textos em negrito */
+            border-radius: 50%; /* Faz a foto ficar redonda */
+            object-fit: cover; /* A imagem será redimensionada para cobrir o espaço */
         }
 
         .days-count {
             font-size: 56px; /* Aumentei mais o tamanho */
             color: pink;
+            font-weight: bold;
             margin: 10px 0;
         }
 
         .start-date {
             font-size: 28px; /* Aumentei o tamanho do texto */
-            color: pink;
-        }
-
-        /* Estilo para a linha horizontal rosa */
-        .line {
-            width: 80%; /* A linha vai ocupar 80% da largura da tela */
-            height: 3px;
-            background-color: pink;
-            margin: 40px auto 0;
-        }
-
-        /* Estilo para a carta que você quer adicionar mais tarde */
-        .letter {
-            margin-top: 40px;
-            color: white;
-            font-size: 20px;
-            width: 80%;
-            max-width: 800px;
-            text-align: left;
-            line-height: 1.6;
-            border-left: 3px solid pink;
-            padding-left: 20px;
+            color: pink; /* Mesma cor do texto de cima */
         }
     </style>
 </head>
 <body>
-    <!-- Borda rosa com corações ao redor -->
-    <div class="border"></div>
-
-    <div class="photo-container">
-        <!-- Substitua 'Image' pelo nome correto -->
-        <img src="Image" alt="Foto do casal">
-    </div>
-
-    <div class="days-count" id="days-count">
-        <!-- Dias juntos serão calculados aqui -->
-    </div>
-
-    <div class="start-date" id="start-date"></div>
-
-    <!-- Linha rosa -->
-    <div class="line"></div>
-
-    <!-- Espaço para a carta -->
-    <div class="letter">
-        <!-- Sua carta ficará aqui em breve -->
+    <div class="background-hearts">
+        <div class="photo-container">
+            <!-- Substitua 'Image' pelo nome correto -->
+            <img src="Image" alt="Foto do casal">
+        </div>
+        <div class="days-count" id="days-count">
+            <!-- Dias juntos serão calculados aqui -->
+        </div>
+        <div class="start-date" id="start-date"></div>
     </div>
 
     <script>
