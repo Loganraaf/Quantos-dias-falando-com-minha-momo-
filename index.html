@@ -21,10 +21,9 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end; /* Move o conteúdo um pouco para baixo */
+            justify-content: center; /* Centraliza o conteúdo verticalmente */
             align-items: center;
             position: relative;
-            padding-bottom: 20px; /* Adiciona um espaço extra na parte inferior */
         }
 
         .photo-container {
@@ -32,11 +31,14 @@
             border-radius: 0%; /* Mantém a foto quadrada */
             display: inline-block;
             overflow: hidden;
+            max-width: 90%; /* Limita a largura da foto */
+            max-height: 80%; /* Limita a altura da foto */
         }
 
         .photo-container img {
             width: 100%; /* Foto ocupa toda a largura do contêiner */
-            height: auto; /* Mantém a proporção original */
+            height: 100%; /* Foto ocupa toda a altura do contêiner */
+            object-fit: contain; /* Mantém a imagem inteira sem cortar */
         }
 
         .days-count {
