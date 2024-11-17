@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contagem de Dias</title>
+</head>
+<body>
+  <h1>Contagem de Dias de Nós Dois</h1>
+  <p>Vocês começaram a se falar em: <span id="dataInicio"></span></p>
+  <p>Vocês estão juntos há <span id="dias"></span> dias!</p>
+  <script>
+    // Função para formatar a data no formato DD/MM/YYYY
+    function formatarData(data) {
+      var dia = data.getDate().toString().padStart(2, '0');
+      var mes = (data.getMonth() + 1).toString().padStart(2, '0'); // Meses começam do 0, então somamos 1
+      var ano = data.getFullYear();
+      return dia + '/' + mes + '/' + ano;
+    }
+
+    // Data de início (1 de julho de 2024)
+    var dataInicio = new Date('2024-07-01'); 
+    var hoje = new Date();
+    
+    // Exibindo a data de início no formato DD/MM/YYYY
+    document.getElementById('dataInicio').textContent = formatarData(dataInicio);
+    
+    // Calculando a diferença de dias
+    var diferenca = hoje - dataInicio;
+    var dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+    
+    // Exibindo o número de dias
+    document.getElementById('dias').textContent = dias;
+  </script>
+</body>
+</html>
