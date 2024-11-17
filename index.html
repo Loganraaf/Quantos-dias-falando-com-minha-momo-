@@ -26,19 +26,19 @@
         }
 
         .photo-container {
-            background: url('https://emoji.gg/assets/emoji/heart_1f970.png') no-repeat center center; /* Coração 🩷 como fundo */
-            background-size: 80%; /* Ajuste o tamanho do coração para caber bem atrás da foto */
-            padding: 20px;
-            border-radius: 50%;
+            border: 10px solid pink; /* Borda mais grossa para dar destaque */
+            padding: 5px;
+            border-radius: 15px;
             display: inline-block;
             margin-bottom: 20px;
             position: relative;
+            z-index: 1; /* Garante que a foto fique acima do fundo */
         }
 
         .photo-container img {
             width: 50vw; /* Foto bem menor, 50% da largura da tela */
             height: auto;
-            border-radius: 50%; /* Faz a foto ficar redonda */
+            border-radius: 15px;
             object-fit: cover; /* A imagem será redimensionada para cobrir o espaço */
         }
 
@@ -47,11 +47,13 @@
             color: pink;
             font-weight: bold;
             margin: 10px 0;
+            z-index: 1; /* Garante que o texto fique acima da imagem */
         }
 
         .start-date {
             font-size: 28px; /* Aumentei o tamanho do texto */
             color: pink; /* Mesma cor do texto de cima */
+            z-index: 1; /* Garante que o texto fique acima da imagem */
         }
     </style>
 </head>
