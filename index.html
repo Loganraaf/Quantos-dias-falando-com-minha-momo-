@@ -73,7 +73,7 @@
 </head>
 <body>
     <div class="container">
-        <img src="data:image/jpeg;base64,<!-- Base64 da imagem aqui -->" alt="Foto do casal" class="photo">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABh..." alt="Foto do casal" class="photo">
         <div class="count" id="days-count"></div>
         <p class="date" id="start-date"></p>
     </div>
@@ -87,7 +87,7 @@
             const today = new Date();
             const timeDifference = today - startDate;
             const days = Math.floor(timeDifference / (1000 * 3600 * 24));  // Convertendo para dias
-            document.getElementById('days-count').innerText = `${days} dias juntos 💖`;
+            document.getElementById('days-count').innerText = `${days} Dias que tu é minha hihi`;
             document.getElementById('start-date').innerText = `Iniciamos em: ${startDate.toLocaleDateString("pt-BR")}`;
         }
 
