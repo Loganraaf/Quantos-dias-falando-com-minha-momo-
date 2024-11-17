@@ -12,19 +12,35 @@
             text-align: center;
             margin: 0;
             padding: 0;
+            position: relative;
+            overflow: hidden; /* Impede que os corações saiam da tela */
         }
 
         .background-hearts {
-            background-image: url('https://cdn.pixabay.com/photo/2019/10/24/12/59/heart-4574815_960_720.jpg'); /* Imagem de fundo com corações 3D rosinha */
-            background-repeat: repeat;
-            background-size: 150px 150px; /* Ajustando o tamanho dos corações */
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            padding-bottom: 40px; /* Adicionando um pouco de espaço abaixo */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Coloca o fundo atrás dos elementos principais */
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 30px; /* Tamanho pequeno dos emojis */
+            animation: float 5s infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+            100% {
+                transform: translateY(0) rotate(360deg);
+            }
         }
 
         .photo-container {
@@ -82,22 +98,35 @@
 </head>
 <body>
     <div class="background-hearts">
-        <div class="photo-container">
-            <!-- Substitua 'Image' pelo nome correto -->
-            <img src="Image" alt="Foto do casal">
-        </div>
-        <div class="days-count" id="days-count">
-            <!-- Dias juntos serão calculados aqui -->
-        </div>
-        <div class="start-date" id="start-date"></div>
+        <!-- Corações flutuantes de forma aleatória -->
+        <div class="heart" style="top: 10%; left: 5%;">💞</div>
+        <div class="heart" style="top: 25%; left: 30%;">💕</div>
+        <div class="heart" style="top: 40%; left: 50%;">💗</div>
+        <div class="heart" style="top: 60%; left: 70%;">💖</div>
+        <div class="heart" style="top: 80%; left: 20%;">🩷</div>
+        <div class="heart" style="top: 15%; left: 75%;">💞</div>
+        <div class="heart" style="top: 50%; left: 85%;">💕</div>
+        <div class="heart" style="top: 70%; left: 40%;">💗</div>
+        <div class="heart" style="top: 30%; left: 10%;">💖</div>
+        <div class="heart" style="top: 55%; left: 60%;">🩷</div>
+        <!-- Adicione mais corações conforme necessário -->
+    </div>
 
-        <!-- Linha horizontal rosa -->
-        <div class="line"></div>
+    <div class="photo-container">
+        <!-- Substitua 'Image' pelo nome correto -->
+        <img src="Image" alt="Foto do casal">
+    </div>
+    <div class="days-count" id="days-count">
+        <!-- Dias juntos serão calculados aqui -->
+    </div>
+    <div class="start-date" id="start-date"></div>
 
-        <!-- Espaço para a carta futura -->
-        <div class="letter" id="letter">
-            <!-- Você pode adicionar sua carta aqui mais tarde -->
-        </div>
+    <!-- Linha horizontal rosa -->
+    <div class="line"></div>
+
+    <!-- Espaço para a carta futura -->
+    <div class="letter" id="letter">
+        <!-- Você pode adicionar sua carta aqui mais tarde -->
     </div>
 
     <script>
