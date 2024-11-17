@@ -3,80 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contagem de Dias Juntos</title>
+    <title>Dias que Tu é Minha</title>
     <style>
-        /* Resetando margens e padding */
-        * {
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
-        /* Estilo geral */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #000;
-            color: #fff;
+        .background-hearts {
+            background-image: radial-gradient(circle, transparent 20%, rgba(255, 192, 203, 0.3) 21%), black;
+            background-size: 40px 40px;
+            height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            overflow: hidden;
-            position: relative;
         }
 
-        /* Fundo com corações */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 30 C70 -10, 110 10, 50 80 C-10 10, 30 -10, 50 30 Z' fill='none' stroke='%23e91e63' stroke-width='2'/%3E%3C/svg%3E");
-            background-repeat: repeat;
-            background-size: 50px;
-            opacity: 0.3;
-            z-index: -1;
+        .photo-container {
+            border: 5px solid pink;
+            padding: 5px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-bottom: 20px;
         }
 
-        /* Container principal */
-        .container {
-            text-align: center;
+        .photo-container img {
+            max-width: 300px;
+            border-radius: 15px;
         }
 
-        /* Foto com borda rosa */
-        .photo {
-            width: 300px;
-            height: auto;
-            border: 5px solid #e91e63;
-            border-radius: 10px;
-            margin: 20px auto;
-            display: block;
-        }
-
-        /* Contagem de dias */
-        .count {
-            font-size: 48px;
+        .days-count {
+            font-size: 36px;
+            color: pink;
             font-weight: bold;
-            color: #e91e63;
-            margin-top: 20px;
+            margin: 10px 0;
         }
 
-        /* Data de início */
-        .date {
+        .start-date {
             font-size: 18px;
-            color: #aaa;
-            margin-top: 10px;
+            color: #ccc;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Foto com link direto -->
-        <img src="SEU_LINK_DA_IMAGEM_AQUI" alt="Foto do casal" class="photo">
-        <div class="count" id="days-count"></div>
-        <p class="date" id="start-date"></p>
+    <div class="background-hearts">
+        <div class="photo-container">
+            <!-- Substitua 'Image' pelo nome correto -->
+            <img src="Image" alt="Foto do casal">
+        </div>
+        <div class="days-count" id="days-count">
+            <!-- Dias juntos serão calculados aqui -->
+        </div>
+        <div class="start-date" id="start-date"></div>
     </div>
 
     <script>
@@ -87,7 +70,7 @@
         function calculateDays() {
             const today = new Date();
             const timeDifference = today - startDate;
-            const days = Math.floor(timeDifference / (1000 * 3600 * 24));  // Convertendo para dias
+            const days = Math.floor(timeDifference / (1000 * 3600 * 24));
             document.getElementById('days-count').innerText = `${days} Dias que tu é minha hihi`;
             document.getElementById('start-date').innerText = `Iniciamos em: ${startDate.toLocaleDateString("pt-BR")}`;
         }
