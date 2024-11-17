@@ -26,20 +26,20 @@
         }
 
         .photo-container {
-            border: 10px solid pink; /* Borda mais grossa para dar destaque */
-            padding: 5px;
-            border-radius: 15px;
+            background: url('https://emoji.gg/assets/emoji/heart_1f970.png') no-repeat center center; /* Coração 🩷 como fundo */
+            background-size: 80%;
+            padding: 20px;
+            border-radius: 50%;
             display: inline-block;
             margin-bottom: 20px;
             position: relative;
-            z-index: 1; /* Garante que a foto fique acima do fundo */
         }
 
         .photo-container img {
             width: 50vw; /* Foto bem menor, 50% da largura da tela */
             height: auto;
-            border-radius: 15px;
-            object-fit: cover; /* A imagem será redimensionada para cobrir o espaço */
+            border-radius: 50%; /* Faz a foto ficar redonda */
+            object-fit: cover;
         }
 
         .days-count {
@@ -47,26 +47,47 @@
             color: pink;
             font-weight: bold;
             margin: 10px 0;
-            z-index: 1; /* Garante que o texto fique acima da imagem */
         }
 
         .start-date {
             font-size: 28px; /* Aumentei o tamanho do texto */
-            color: pink; /* Mesma cor do texto de cima */
-            z-index: 1; /* Garante que o texto fique acima da imagem */
+            color: pink;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para a linha rosa */
+        .line {
+            width: 60%;
+            border-top: 3px solid pink;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        /* Estilo para o conteúdo da carta */
+        .letter {
+            font-size: 24px;
+            color: pink;
+            text-align: left;
+            width: 80%;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body>
     <div class="background-hearts">
         <div class="photo-container">
-            <!-- Substitua 'Image' pelo nome correto -->
             <img src="Image" alt="Foto do casal">
         </div>
-        <div class="days-count" id="days-count">
-            <!-- Dias juntos serão calculados aqui -->
-        </div>
+        <div class="days-count" id="days-count"></div>
         <div class="start-date" id="start-date"></div>
+
+        <!-- Linha rosa abaixo dos textos -->
+        <div class="line"></div>
+
+        <!-- Espaço para a carta -->
+        <div class="letter">
+            <p>Escreva sua carta aqui...</p>
+        </div>
     </div>
 
     <script>
