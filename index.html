@@ -15,14 +15,17 @@
         }
 
         .background-hearts {
-            background-image: radial-gradient(circle, transparent 20%, rgba(255, 192, 203, 0.5) 21%), black;
-            background-size: 30px 30px;
+            background-image: url('https://www.transparenttextures.com/patterns/3d-squares.png'), 
+                              url('https://www.freepik.com/free-vector/3d-valentines-day-hearts-with-rose-background_9926393.htm'); /* Coração 3D rosa */
+            background-repeat: repeat, repeat;
+            background-size: 60px 60px, 100px 100px; /* Ajustando o tamanho do fundo com corações */
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             position: relative;
+            padding-bottom: 40px; /* Adicionando um pouco de espaço abaixo */
         }
 
         .photo-container {
@@ -55,6 +58,27 @@
             color: pink; /* Mesma cor do texto de cima */
             z-index: 1; /* Garante que o texto fique acima da imagem */
         }
+
+        /* Estilo para a linha horizontal rosa */
+        .line {
+            width: 80%; /* A linha vai ocupar 80% da largura da tela */
+            height: 3px;
+            background-color: pink;
+            margin: 40px auto 0; /* Deixei espaço acima da linha e centralizei */
+        }
+
+        /* Estilo para a carta que você quer adicionar mais tarde */
+        .letter {
+            margin-top: 40px;
+            color: white;
+            font-size: 20px;
+            width: 80%;
+            max-width: 800px;
+            text-align: left;
+            line-height: 1.6;
+            border-left: 3px solid pink;
+            padding-left: 20px;
+        }
     </style>
 </head>
 <body>
@@ -67,6 +91,14 @@
             <!-- Dias juntos serão calculados aqui -->
         </div>
         <div class="start-date" id="start-date"></div>
+
+        <!-- Linha horizontal rosa -->
+        <div class="line"></div>
+
+        <!-- Espaço para a carta futura -->
+        <div class="letter" id="letter">
+            <!-- Você pode adicionar sua carta aqui mais tarde -->
+        </div>
     </div>
 
     <script>
