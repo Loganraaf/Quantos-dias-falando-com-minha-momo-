@@ -15,26 +15,31 @@
         }
 
         .background-hearts {
-            background-image: radial-gradient(circle, transparent 20%, rgba(255, 192, 203, 0.3) 21%), black;
-            background-size: 40px 40px;
+            background-image: radial-gradient(circle, transparent 20%, rgba(255, 192, 203, 0.5) 21%), black;
+            background-size: 30px 30px;
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
 
         .photo-container {
-            border: 5px solid pink;
+            border: 10px solid pink; /* Borda mais grossa para dar destaque */
             padding: 5px;
             border-radius: 15px;
             display: inline-block;
             margin-bottom: 20px;
+            position: relative;
+            z-index: 1; /* Garante que a foto fique acima do fundo */
         }
 
         .photo-container img {
-            max-width: 400px; /* Aumentei o tamanho da foto */
+            width: 100vw; /* Aumenta a imagem para o tamanho da tela */
+            height: auto;
             border-radius: 15px;
+            object-fit: cover; /* A imagem será redimensionada para cobrir o espaço */
         }
 
         .days-count {
@@ -42,11 +47,13 @@
             color: pink;
             font-weight: bold;
             margin: 10px 0;
+            z-index: 1; /* Garante que o texto fique acima da imagem */
         }
 
         .start-date {
             font-size: 18px;
             color: pink; /* Mesma cor do texto de cima */
+            z-index: 1; /* Garante que o texto fique acima da imagem */
         }
     </style>
 </head>
