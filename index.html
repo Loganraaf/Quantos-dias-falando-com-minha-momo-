@@ -17,30 +17,26 @@
         .background-hearts {
             background-image: url('fundo.png'); /* Usando a imagem "fundo" */
             background-size: cover; /* Faz o fundo cobrir toda a tela */
+            background-position: center; /* Centraliza o fundo */
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Centraliza o conteúdo verticalmente */
-            align-items: center; /* Centraliza o conteúdo horizontalmente */
+            justify-content: flex-end; /* Move o conteúdo um pouco para baixo */
+            align-items: center;
             position: relative;
+            padding-bottom: 20px; /* Adiciona um espaço extra na parte inferior */
         }
 
         .photo-container {
-            padding: 20px;
             border: 10px solid pink; /* Borda rosa em volta da foto */
             border-radius: 0%; /* Mantém a foto quadrada */
             display: inline-block;
-            margin-top: 20px; /* Adiciona um espaço para abaixar a foto */
-            position: relative;
             overflow: hidden;
         }
 
         .photo-container img {
-            width: auto;
-            max-width: 90vw; /* Foto ocupa 90% da largura da tela */
-            height: auto;
-            max-height: 70vh; /* Foto ocupa até 70% da altura da tela */
-            object-fit: contain; /* Mantém a proporção original */
+            width: 100%; /* Foto ocupa toda a largura do contêiner */
+            height: auto; /* Mantém a proporção original */
         }
 
         .days-count {
