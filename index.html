@@ -13,19 +13,19 @@
             margin: 0;
             padding: 0;
             position: relative;
-            overflow: hidden; /* Impede que qualquer conteúdo saia da tela */
+            overflow: hidden;
         }
 
-        /* Borda com corações rosa ao redor */
+        /* Borda rosa com corações ao redor */
         .border {
-            border: 10px solid pink; /* Borda rosa */
-            padding: 15px;
-            border-radius: 15px;
             position: absolute;
-            top: 10px;
-            bottom: 10px;
-            left: 10px;
-            right: 10px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 10px solid pink; /* Borda rosa */
+            border-radius: 15px;
+            pointer-events: none; /* Impede que a borda interfira no conteúdo */
         }
 
         .photo-container {
@@ -39,7 +39,7 @@
         }
 
         .photo-container img {
-            width: 50vw; /* Foto bem menor, 50% da largura da tela */
+            width: 50vw; /* Foto ajustada para 50% da largura da tela */
             height: auto;
             border-radius: 15px;
             object-fit: cover;
@@ -53,13 +53,11 @@
             font-size: 56px; /* Aumentei mais o tamanho */
             color: pink;
             margin: 10px 0;
-            z-index: 1;
         }
 
         .start-date {
             font-size: 28px; /* Aumentei o tamanho do texto */
             color: pink;
-            z-index: 1;
         }
 
         /* Estilo para a linha horizontal rosa */
@@ -85,20 +83,24 @@
     </style>
 </head>
 <body>
-    <div class="border">
-        <!-- Borda com corações rosa ao redor da tela -->
-    </div>
+    <!-- Borda rosa com corações ao redor -->
+    <div class="border"></div>
 
     <div class="photo-container">
         <!-- Substitua 'Image' pelo nome correto -->
         <img src="Image" alt="Foto do casal">
     </div>
+
     <div class="days-count" id="days-count">
         <!-- Dias juntos serão calculados aqui -->
     </div>
+
     <div class="start-date" id="start-date"></div>
 
+    <!-- Linha rosa -->
     <div class="line"></div>
+
+    <!-- Espaço para a carta -->
     <div class="letter">
         <!-- Sua carta ficará aqui em breve -->
     </div>
