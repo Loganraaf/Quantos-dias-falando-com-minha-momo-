@@ -15,7 +15,7 @@
         }
 
         .background-hearts {
-            background-image: url('fundo.png'); /* Substitua com o caminho correto para a imagem "fundo" */
+            background-image: url('fundo.png'); /* Usando a imagem "fundo" que você mencionou */
             background-size: cover; /* Faz o fundo cobrir toda a tela */
             height: 100vh;
             display: flex;
@@ -27,7 +27,8 @@
 
         .photo-container {
             padding: 20px;
-            border-radius: 15px;
+            border: 10px solid pink; /* Borda rosa em volta da foto */
+            border-radius: 0%; /* Mantendo a foto quadrada */
             display: inline-block;
             margin-bottom: 20px;
             position: relative;
@@ -36,10 +37,10 @@
 
         .photo-container img {
             width: auto;
-            max-width: 90vw; /* Ajuste da largura, mantendo a proporção original */
+            max-width: 90vw; /* Foto ocupa 90% da largura da tela */
             height: auto;
-            max-height: 70vh; /* Ajuste da altura para não ocupar toda a tela */
-            object-fit: contain; /* Manter a proporção original da imagem */
+            max-height: 70vh; /* Foto ocupa até 70% da altura da tela */
+            object-fit: contain; /* Mantém a proporção original */
         }
 
         .days-count {
