@@ -15,22 +15,22 @@
         }
 
         .background-hearts {
-            background-image: url('fundo.png'); /* Usando a imagem "fundo" que você mencionou */
+            background-image: url('fundo.png'); /* Usando a imagem "fundo" */
             background-size: cover; /* Faz o fundo cobrir toda a tela */
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            position: relative;
+            justify-content: flex-start; /* Move o conteúdo mais para cima */
+            padding-top: 50px; /* Adiciona um espaço no topo */
         }
 
         .photo-container {
-            padding: 20px;
-            border: 10px solid pink; /* Borda rosa em volta da foto */
-            border-radius: 0%; /* Mantendo a foto quadrada */
+            margin-top: 30px; /* Adiciona um espaço acima da foto */
+            padding: 10px;
+            border: 5px solid pink; /* Borda rosa em volta da foto */
+            border-radius: 0%; /* Mantém a foto quadrada */
             display: inline-block;
-            margin-bottom: 20px;
             position: relative;
             overflow: hidden;
         }
@@ -44,14 +44,14 @@
         }
 
         .days-count {
-            font-size: 56px; /* Aumentei mais o tamanho */
+            font-size: 48px; /* Ajustei o tamanho */
             color: pink;
             font-weight: bold;
-            margin: 10px 0;
+            margin-top: 20px; /* Espaço entre o texto e a foto */
         }
 
         .start-date {
-            font-size: 28px; /* Aumentei o tamanho do texto */
+            font-size: 24px; /* Ajustei o tamanho do texto */
             color: pink;
             margin-bottom: 20px;
         }
@@ -66,7 +66,7 @@
 
         /* Estilo para o conteúdo da carta */
         .letter {
-            font-size: 24px;
+            font-size: 20px;
             color: pink;
             text-align: left;
             width: 80%;
@@ -76,10 +76,10 @@
 </head>
 <body>
     <div class="background-hearts">
+        <div class="days-count">Te amo vida</div>
         <div class="photo-container">
             <img src="Image" alt="Foto do casal">
         </div>
-        <div class="days-count" id="days-count"></div>
         <div class="start-date" id="start-date"></div>
 
         <!-- Linha rosa abaixo dos textos -->
@@ -87,7 +87,7 @@
 
         <!-- Espaço para a carta -->
         <div class="letter">
-            <p>Escreva sua carta aqui...</p>
+            <p>I love you...</p>
         </div>
     </div>
 
@@ -100,7 +100,6 @@
             const today = new Date();
             const timeDifference = today - startDate;
             const days = Math.floor(timeDifference / (1000 * 3600 * 24));
-            document.getElementById('days-count').innerText = `${days} Dias que tu é minha hihi`;
             document.getElementById('start-date').innerText = `Tu tá desde 01/07/2024 me aturando em momor, que guerreira 🙈`;
         }
 
